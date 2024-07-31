@@ -1,3 +1,9 @@
+.drawerHeader {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 0 8px;
+}
 .dashboard {
   background-color: #f5f5f5;
   min-height: 100vh;

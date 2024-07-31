@@ -5,8 +5,6 @@ import {
   Routes,
   useLocation,
 } from "react-router-dom";
-import { ThemeProvider } from "@mui/material/styles";
-import theme from "./styles/theme";
 import Dashboard from "./components/Dashboard";
 import Sidebar from "./components/Sidebar/Sidebar";
 import LogIn from "./components/login";
@@ -14,11 +12,9 @@ import Analytics from "./components/Analytics";
 
 const App = () => {
   return (
-    <ThemeProvider theme={theme}>
-      <Router>
-        <AppContent />
-      </Router>
-    </ThemeProvider>
+    <Router>
+      <AppContent />
+    </Router>
   );
 };
 

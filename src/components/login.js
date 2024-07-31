@@ -21,10 +21,13 @@ const LogIn = () => {
     e.preventDefault();
     console.log("Submitting login request", { email, password });
     try {
-      const response = await axios.post("http://localhost:5000/login", {
-        email,
-        password,
-      });
+      const response = await axios.post(
+        `${process.env.REACT_APP_API_URL}/login`,
+        {
+          email,
+          password,
+        }
+      );
       console.log("Login response", response);
       localStorage.setItem("token", response.data.token);
       navigate("/dashboard");
